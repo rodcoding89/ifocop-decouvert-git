@@ -20,5 +20,15 @@
             <img src="https://source.unsplash.com/500x200" alt="">
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        for (let i = 0; i < 5; i++) {
+            $(".miniature img").eq(i).on("click",function(){
+                let urlImg = $(".miniature img").eq(i).attr("src");
+                $("header img").attr("src",urlImg);
+            })
+            
+        }
+    </script>
 </body>
 </html>
