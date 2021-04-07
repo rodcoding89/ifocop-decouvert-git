@@ -18,14 +18,42 @@
         border : 2px solid grey;
         box-sizing: border-box;
     }
+    .burger span{
+        width : 40px;
+        height : 5px;
+        margin : 3px 0 3px;
+        display : block;
+        background-color : grey;
+        border-radius : 5px;
+    }
+    header{
+        display: flex;
+        align-items: center;
+    }
+    header ul{
+        display: flex;
+        list-style: none;
+    }
+    header ul li{
+        margin-right: 10px;
+    }
 </style>
 <body>
+    <header>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>Lorem.</li>
+            <li>Amet.</li>
+            <li>Quibusdam.</li>
+            <li>Incidunt?</li>
+        </ul>
+    </header>
+    
     <h1>Bonjour je decouvre git</h1>
-    <div class="menu-burger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
     <div class="diaporama">
         <header>
             <img src="https://source.unsplash.com/500x200" alt="">
@@ -47,6 +75,13 @@
             })
             
         }
+        $(".burger").on("click",function(){
+            if($("ul").is(":hidden")){
+                $("ul").show();
+            }else{
+                $("ul").hide();
+            }
+        })
     </script>
 </body>
 </html>
